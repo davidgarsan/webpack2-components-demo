@@ -1,3 +1,4 @@
+/*eslint-disable no-unused-vars*/
 import styles from '../css/app.css';
 import fonts from '../css/font.css';
 import _ from 'lodash';
@@ -11,15 +12,15 @@ const component = function () {
   const foot = document.createElement('footer');
   const now = moment().format('D MMMM YYYY, hh:mm:ss');
   const list = ['Foo', 'Bar', 'Baz'];
-  const txt = `<p>Texto multilinea 
-  con variables y un listado:
+  const txt = `<p>Texto multilínea 
+  con variables y un listado HTML:
     <ul>
       <li>${list[0]}</li>
       <li>${list[1]}</li>
       <li>${list[2]}</li>
-    <ul></p>`;
-
-  head.innerHTML = _.join(['Hola','webpack 2.2 beta', `(${now})`], ' ');
+    <ul>
+  </p>`;
+  head.innerHTML = _.join(['Demo','webpack 2.2 beta', `(${now})`], ' ');
   body.innerHTML = txt;
   foot.innerHTML = '<button>Aceptar</button>';
   element.appendChild(head);

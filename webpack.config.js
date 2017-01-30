@@ -1,31 +1,35 @@
 const webpack = require('webpack');
 const path = require('path');
 const version = '0.0.1';
-const PATHS = {
-  src: path.join(__dirname, 'src'),
-  dist: path.join(__dirname, 'dist')
-};
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const html = new HtmlWebpackPlugin(
   {
-    title: 'Demo Webpack', 
-    template: path.join(__dirname, 'index.html') 
+    template: path.join(__dirname, 'src/index.html') 
 });
-const extractStyles = new ExtractTextPlugin('./src/css/app.css');
-const extractFonts = new ExtractTextPlugin('./src/css/fonts.css');
+const extractStyles = new ExtractTextPlugin('css/app.css');
+const extractFonts = new ExtractTextPlugin('css/fonts.css');
 
 module.exports = {
   context: path.resolve(__dirname, ''),
   entry: {
-    app: [ './src/js/index.js' ]
+    'js/app': './src/js/index.js'
   },
   output: {
-    path: path.join(__dirname, 'dist/js'),
+    path: path.join(__dirname, 'dist'),
     filename: `[name]-${version}.js`,
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+        options: {
+          fix: true
+        }
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -54,7 +58,7 @@ module.exports = {
       },
     ],
   },
-  // devtool: "cheap-eval-source-map",
+  devtool: 'cheap-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
