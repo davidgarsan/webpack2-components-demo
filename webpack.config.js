@@ -43,7 +43,7 @@ module.exports = {
       {
         test: /app\.css/,
         use: extractStyles.extract({
-          loader: 'css-loader?importLoaders=1!postcss-loader',
+          loader: 'css-loader?importLoaders=1&modules&localIdentName=[local]--[hash:base64:5]!postcss-loader',
         })
       },
       {

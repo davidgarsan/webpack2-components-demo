@@ -4,3 +4,7 @@
 
 /* Components */
 @import "components/component.css";
+
+.cosa {
+    color: red;
+}

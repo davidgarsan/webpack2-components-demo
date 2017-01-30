@@ -1,4 +1,4 @@
-/*eslint-disable no-unused-vars*/
+/*eslint-disable no-unused-vars, no-console*/
 import styles from '../css/app.css';
 import fonts from '../css/font.css';
 import _ from 'lodash';
@@ -26,7 +26,7 @@ const component = function () {
   element.appendChild(head);
   element.appendChild(body);
   element.appendChild(foot);
-  element.className = 'component';
+  element.className = styles.component;
   return element;
 }
 
