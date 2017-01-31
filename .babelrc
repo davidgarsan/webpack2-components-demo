@@ -1,0 +1,7 @@
+{
+  "presets": [ "es2015"],
+  "plugins": [
+    "istanbul",
+    "babel-plugin-add-module-exports"
+  ]
+}
