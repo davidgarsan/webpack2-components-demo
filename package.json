@@ -40,7 +40,6 @@
   "scripts": {
     "build": "webpack -p",
     "start": "webpack-dev-server --progress --color",
-    "test2": "mocha --debug --compilers js:babel-register --colors -w ./test/*.spec.js",
     "test": "testem ci",
     "test:dev": "testem",
     "test:node": "mocha -r test/setup.js -R tap test/*.spec.js",

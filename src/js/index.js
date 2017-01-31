@@ -5,8 +5,6 @@ import _ from 'lodash';
 import moment from 'moment';
 moment.locale('es');
 
-const document = document || {};
-
 const component = function () {
   const element = document.createElement('div');
   const head = document.createElement('header');
