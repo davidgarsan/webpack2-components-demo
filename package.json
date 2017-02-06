@@ -47,7 +47,8 @@
     "coverage": "nyc --reporter=html mocha",
     "doc": "esdoc -c esdoc.json"
   },
-  "pre-commit": [
-    "test:node"
-  ]
+  "pre-commit": {
+    "silent": true,
+    "run": "test:node"
+  }
 }
