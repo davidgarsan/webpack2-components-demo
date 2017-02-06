@@ -19,14 +19,14 @@ const Babel = {
 const Styles = {
   test: /app\.css/,
   use: plugins.styles.extract({
-    use: 'css-loader?importLoaders=1&modules&localIdentName=[local]--[hash:base64:5]!postcss-loader',
+    loader: 'css-loader?importLoaders=1&modules&localIdentName=[local]--[hash:base64:5]!postcss-loader'
   })
 };
 
 const Fonts = {
   test: /font\.css/,
   use: plugins.fonts.extract({
-    use: 'css-loader',
+    loader: 'css-loader'
   })
 };
 
