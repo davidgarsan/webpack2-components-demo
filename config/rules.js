@@ -26,7 +26,7 @@ const Styles = {
 const Fonts = {
   test: /font\.css/,
   use: plugins.fonts.extract({
-    loader: 'css-loader'
+    loader: 'css-loader?limit=100000'
   })
 };
 

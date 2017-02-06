@@ -13,7 +13,7 @@ module.exports = env => {
     },
     output: {
       path: path.join(__dirname, '../dist'),
-      filename: `[name]-${version}.js`,
+      filename: `[name]-${version}.js`
     },
     module: {
       rules: [
