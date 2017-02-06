@@ -38,13 +38,13 @@ module.exports = {
       {
         test: /app\.css/,
         use: extractStyles.extract({
-          loader: 'css-loader?importLoaders=1&modules&localIdentName=[local]--[hash:base64:5]!postcss-loader',
+          use: 'css-loader?importLoaders=1&modules&localIdentName=[local]--[hash:base64:5]!postcss-loader',
         })
       },
       {
         test: /font\.css/,
         use: extractFonts.extract({
-          loader: 'css-loader',
+          use: 'css-loader',
         })
       },
       {

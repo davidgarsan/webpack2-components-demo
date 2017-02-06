@@ -13,14 +13,14 @@ const component = function () {
   const now = moment().format('D MMMM YYYY, hh:mm:ss');
   const list = ['Foo', 'Bar', 'Baz'];
   const txt = `<p>Texto multilínea 
-  con variables y un listado HTML:
+  con variables y un listado HTML5:
     <ul>
       <li>${list[0]}</li>
       <li>${list[1]}</li>
       <li>${list[2]}</li>
     <ul>
   </p>`;
-  head.innerHTML = _.join(['Demo','webpack 2.2 beta', `(${now})`], ' ');
+  head.innerHTML = _.join(['Demo','webpack 2.2', `(${now})`], ' ');
   body.innerHTML = txt;
   foot.innerHTML = '<button>Aceptar</button>';
   element.appendChild(head);

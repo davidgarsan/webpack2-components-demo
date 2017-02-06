@@ -29,7 +29,7 @@
     "sinon": "^1.17.7",
     "testem": "^1.14.3",
     "url-loader": "^0.5.7",
-    "webpack": "beta",
+    "webpack": "^2.2.1",
     "webpack-dev-server": "^1.16.2",
     "yargs": "^6.6.0"
   },
