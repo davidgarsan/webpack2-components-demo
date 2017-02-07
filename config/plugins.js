@@ -11,12 +11,7 @@ const html = new HtmlWebpackPlugin(
   {
     template: path.join(__dirname, '../src/index.html') 
 });
-//const styles = new ExtractTextPlugin('css/app.css');
-const styles = new ExtractTextPlugin({
-  filename: "css/[name].css?[hash]-[chunkhash]-[contenthash]-[name]",
-  disable: false,
-  allChunks: true
-});
+const styles = new ExtractTextPlugin('css/app.css');
 const fonts = new ExtractTextPlugin('css/fonts.css');
 
 module.exports = {
