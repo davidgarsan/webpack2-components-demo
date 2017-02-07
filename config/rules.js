@@ -17,7 +17,8 @@ const Babel = {
 };
 
 const Styles = {
-  test: /app\.css/,
+  test: /\.css/,
+  exclude: /font\.css/,
   use: plugins.styles.extract({
     loader: 'css-loader?importLoaders=1&modules&localIdentName=[local]--[hash:base64:5]!postcss-loader'
   })

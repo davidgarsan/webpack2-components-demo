@@ -1,33 +1,57 @@
 /*eslint-disable no-unused-vars, no-console*/
 import styles from '../css/app.css';
 import fonts from '../css/font.css';
-import _ from 'lodash';
 import moment from 'moment';
+import * as Card from '../components/card/component';
 moment.locale('es');
 
-const component = function () {
-  const element = document.createElement('div');
-  const head = document.createElement('header');
-  const body = document.createElement('div');
-  const foot = document.createElement('footer');
-  const now = moment().format('D MMMM YYYY, hh:mm:ss');
-  const list = ['Foo', 'Bar', 'Baz'];
-  const txt = `<p>Texto multilínea 
-  con variables y un listado HTML5:
-    <ul>
-      <li>${list[0]}</li>
-      <li>${list[1]}</li>
-      <li>${list[2]}</li>
-    <ul>
-  </p>`;
-  head.innerHTML = _.join(['Demo','webpack 2.2', `(${now})`], ' ');
-  body.innerHTML = txt;
-  foot.innerHTML = '<button>Aceptar</button>';
-  element.appendChild(head);
-  element.appendChild(body);
-  element.appendChild(foot);
-  element.className = styles.component;
-  return element;
-}
+(function () {
+  const list = [
+    { label: 'Actualización:', id: 'when' },
+    { label: 'Descripción:', id: 'desc' },
+    { label: 'Temperatura:', id: 'temp' },
+    { label: 'Humedad:', id: 'hum' }
+  ]; 
+  const getWeather = () => {
+    return fetch('http://api.openweathermap.org/data/2.5/weather?q=Tres%20Cantos,es&lang=es&units=metric&appid=5c85055320cd6cf61674dd4f3b5d7fd7',
+      {
+        method: 'GET',
+        cache: 'default'
+      })
+      .then(function(response) {
+        return response.json();
+      });
+  };
+  const updateWeather = () => {
+    const when = moment().format('D MMMM YYYY, hh:mm:ss');
+    getWeather()
+      .then(function(json) {
+        console.log(json);
+        Card.update( card, {
+          when,
+          icon: json.weather[0].icon,
+          desc: json.weather[0].description,
+          temp: json.main.temp.toLocaleString() + 'º',
+          hum: json.main.humidity + '%'
+        });
+    });
+  };
 
-document.body.appendChild(component());
+  // Tarjeta del tiempo
+  const card = Card.render({ title: `Tiempo en Tres Cantos`, list, btnLabel:'Actualizar', callback: updateWeather }, null);
+  updateWeather();
+
+  // Tarjeta con listado
+  Card.render({
+    title: `Otra tarjeta`, 
+    list: [{ label: 'Item 1'}, { label: 'Item 2'}, { label: 'Item 3'}], 
+    callback: function() { alert('click: esta es una tarjeta con listado'); }
+  });
+  
+  // tarjeta simple
+  Card.render({
+    title: `Y otra más`, 
+    list: [], 
+    callback: function() { alert('click: esta es una tarjeta simple'); }
+  });
+}());

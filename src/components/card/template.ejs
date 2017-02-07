@@ -1,0 +1,18 @@
+<div class=<%= style %>>
+  <header>
+    <img src="">
+    <span><%- title %></span>
+  </header>
+  <div>
+      <ul>
+      <% list.forEach(function(c, i, a) {%>
+        <li><%=c.label %> <strong class="<%=c.id %>"></strong></li>
+      <%});%>
+      <ul>
+    </p>
+    <span class="temp"></span>
+  </div>
+  <footer>
+    <button><%= btnLabel %></button>
+  </footer>
+</div>
