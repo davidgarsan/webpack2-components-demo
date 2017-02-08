@@ -11,7 +11,7 @@ moment.locale('es');
     { label: 'Descripción:', id: 'desc' },
     { label: 'Temperatura:', id: 'temp' },
     { label: 'Humedad:', id: 'hum' }
-  ]; 
+  ];
   const getWeather = () => {
     return fetch('http://api.openweathermap.org/data/2.5/weather?q=Tres%20Cantos,es&lang=es&units=metric&appid=5c85055320cd6cf61674dd4f3b5d7fd7',
       {
@@ -43,15 +43,15 @@ moment.locale('es');
 
   // Tarjeta con listado
   Card.render({
-    title: `Otra tarjeta`, 
-    list: [{ label: 'Item 1'}, { label: 'Item 2'}, { label: 'Item 3'}], 
+    title: `Otra tarjeta`,
+    list: [{ label: 'Item 1'}, { label: 'Item 2'}, { label: 'Item 3'}],
     callback: function() { alert('click: esta es una tarjeta con listado'); }
   });
-  
+
   // tarjeta simple
   Card.render({
-    title: `Y otra más`, 
-    list: [], 
+    title: `Y otra más`,
+    list: [],
     callback: function() { alert('click: esta es una tarjeta simple'); }
   });
 }());

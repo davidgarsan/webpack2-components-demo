@@ -36,12 +36,13 @@ module.exports = env => {
       port: 9000
   },
    /* 'ejs-compiled-loader': {
-      'htmlmin': true,  
+      'htmlmin': true,
       'htmlminOptions': {
         removeComments: true
       }
     },*/
     plugins: [
+      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /es|ca/),
       plugins.styles,
       plugins.fonts,
       plugins.html
