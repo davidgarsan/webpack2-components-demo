@@ -9,11 +9,11 @@ end_of_line = lf
 insert_final_newline = true
 
 # Set default charset
-[*.{js,css,json}]
+[*.{js,css,json,ejs}]
 charset = utf-8
 
 # Indentation
-[*.js,*.css,*.json]
+[*.js,*.css,*.json,*.ejs]
 indent_style = space
 indent_size = 2
 

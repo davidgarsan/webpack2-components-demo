@@ -11,7 +11,7 @@
   font-weight: var(--font-weight);
   line-height: var(--line-height);
   background-color: var(--color-back);
-  border: 1px solid #CCC; 
+  border: 1px solid #CCC;
   padding: .75rem;
   border-radius: .5rem;
   max-width: none;
@@ -27,6 +27,11 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    & img {
+      display: none;
+      width: 50px;
+      height: 50px;
+    }
     & span {
       align-self: flex-end;
       font-weight: bold;
@@ -46,4 +51,8 @@
   @media (width > 600px) {
     max-width: 30rem;
   }
+}
+
+.hasIcon header img {
+  display: block;
 }
