@@ -32,7 +32,7 @@ const Fonts = {
 };
 
 const URLs = {
-  test: /\.(woff|woff2)$/,
+  test: /\.(svg|ttf|eot|woff|woff2)$/,
   use: ['url-loader']
 };
 

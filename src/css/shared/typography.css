@@ -1,6 +1,6 @@
 /* shared/typography.css */
 :root {
-    --font-text: "FF DIN", sans-serif;
+    --font-text: FontAwesome, sans-serif;
     --font-weight: 300;
     --line-height: 1.5;
 }

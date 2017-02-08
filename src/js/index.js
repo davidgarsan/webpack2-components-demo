@@ -1,6 +1,6 @@
 /*eslint-disable no-unused-vars, no-console*/
-import styles from '../css/app.css';
 import fonts from '../css/font.css';
+import styles from '../css/app.css';
 import moment from 'moment';
 import * as Card from '../components/card/component';
 moment.locale('es');
@@ -31,7 +31,7 @@ moment.locale('es');
           when,
           icon: json.weather[0].icon,
           desc: json.weather[0].description,
-          temp: json.main.temp.toLocaleString() + 'º',
+          temp: json.main.temp.toLocaleString() + 'ºC',
           hum: json.main.humidity + '%'
         });
     });
