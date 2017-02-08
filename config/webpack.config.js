@@ -42,7 +42,7 @@ module.exports = env => {
       }
     },*/
     plugins: [
-      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /es|ca/),
+      plugins.momentJSLocale,
       plugins.styles,
       plugins.fonts,
       plugins.html
