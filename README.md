@@ -1,6 +1,6 @@
 ## Webpack2 Demo
 
-Messing with Webpack2, ES6, PostCSS...
+Messing with Webpack2, ES6, EJS, PostCSS...
 
 ### Install & Launch Component Demo
 1. `git clone https://github.com/davidgarsan/webpack2-demo.git`
