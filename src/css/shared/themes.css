@@ -1,0 +1,26 @@
+/* shared/themes.css */
+:root {
+    --theme-a: {
+        background-color: var(--color-secondary-a);
+        color: var(--text-color-a);
+    & button {
+          background-color: var(--color-primary-a);
+      }
+    };
+
+    --theme-b: {
+        background-color: var(--color-secondary-b);
+        color: var(--text-color-b);
+    & button {
+          background-color: var(--color-primary-b);
+      }
+    };
+
+    --theme-c: {
+        background-color: var(--color-secondary-c);
+        color: var(--text-color-c);
+    & button {
+          background-color: var(--color-primary-c);
+      }
+    };
+}

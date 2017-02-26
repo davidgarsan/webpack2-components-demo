@@ -1,7 +1,21 @@
 /* shared/colors.css */
 :root {
+    /* Common */
     --color-black: rgb(0,0,0);
     --color-blue: #32c7ff;
-    --color-green: #48c822;
-    --color-back: #eee;
+
+    /* Theme A */
+    --color-primary-a: #48c822;
+    --color-secondary-a: #eee;
+    --text-color-a: #000;
+
+    /* Theme B */
+    --color-primary-b: #016FFE;
+    --color-secondary-b: #FEF6A9;
+    --text-color-b: #427DB2;
+
+    /* Theme C */
+    --color-primary-c: #FE5E01;
+    --color-secondary-c: #333;
+    --text-color-c: #fff;
 }
