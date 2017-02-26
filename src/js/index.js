@@ -45,13 +45,15 @@ moment.locale('es');
   Card.render({
     title: `Otra tarjeta`,
     list: [{ label: 'Item 1'}, { label: 'Item 2'}, { label: 'Item 3'}],
-    callback: function() { alert('click: esta es una tarjeta con listado'); }
+    callback: function() { alert('click: esta es una tarjeta con listado');},
+    theme: 'b'
   });
 
   // tarjeta simple
   Card.render({
     title: `Y otra más`,
     list: [],
-    callback: function() { alert('click: esta es una tarjeta simple'); }
+    callback: function() { alert('click: esta es una tarjeta simple'); },
+    theme: 'c'
   });
 }());

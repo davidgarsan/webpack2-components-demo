@@ -13,10 +13,11 @@ moment.locale('es');
  * @example
  */
 
-function render({ title = 'Cargando', list, btnLabel = 'Aceptar', callback }, parent) {
+function render({ title = 'Cargando', list, btnLabel = 'Aceptar', callback, theme = 'default' }, parent) {
   const container = parent || document.body;
   const div = document.createElement('div');
-  div.innerHTML = template({ title, list, btnLabel, style: styles.component });
+  const theming =  `${styles.component} ${styles[theme]}`;
+  div.innerHTML = template({ title, list, btnLabel, style: theming });
   const element = div.firstChild;
   container.append(element);
   element.querySelector('button').onclick = callback;

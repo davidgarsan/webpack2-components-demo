@@ -1,7 +1,20 @@
 /* components/component.css */
 /* Shared */
 @import "../../css/shared/colors.css";
+@import "../../css/shared/themes.css";
 @import "../../css/shared/typography.css";
+
+.default {
+  @apply --theme-a;
+}
+
+.b {
+  @apply --theme-b;
+}
+
+.c {
+  @apply --theme-c;
+}
 
 .component {
   display: flex;
@@ -10,18 +23,13 @@
   font-family: var(--font-text);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
-  background-color: var(--color-back);
   border: 1px solid #CCC;
   padding: .75rem;
   border-radius: .5rem;
   max-width: none;
   margin-bottom: .5rem;
   & a {
-    color: var(--color-blue);
     text-shadow: black;
-  }
-  & p {
-    color: var(--color-black);
   }
   & header {
     display: flex;
@@ -42,7 +50,6 @@
     & button {
       font-size: 1rem;
       color: white;
-      background-color: var(--color-green);
       padding: 10px 30px;
       border-radius: 4px;
       border: none;
