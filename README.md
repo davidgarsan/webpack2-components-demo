@@ -1,4 +1,4 @@
-## Webpack2 Demo
+## Webpack2 Components Demo
 
 Messing with Webpack2, ES6, EJS, PostCSS...
 
